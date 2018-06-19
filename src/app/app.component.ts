@@ -9,6 +9,6 @@ import { SomeService } from '@ui-services/some-service.service';
 export class AppComponent {
   output;
   constructor(private someService: SomeService) {
-    this.output = someService.echoTxt('Harry');
+    this.output = someService.echoTxt('Hallo Harry');
   }
 }

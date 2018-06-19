@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { SomeOtherService } from '@ui-services/some-other-service.service';
+import { SomeOtherBaseService } from '@ui-services/some-other-base-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SomeService {
+export class SomeService extends SomeOtherBaseService {
 
-  constructor(private someOtherService: SomeOtherService) { }
+  constructor(private someOtherBaseService: SomeOtherBaseService) {
+    super();
+  }
 
   echoTxt (txt: string): string {
-    return `from some-service: ${this.someOtherService.echoStrg(txt)}`;
+    return 'Hallo ' + this.echoStrg(txt);
   }
 }
