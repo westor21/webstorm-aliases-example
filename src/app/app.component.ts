@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SomeService } from '@ui-services/some-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  output;
+  constructor(private someService: SomeService) {
+    this.output = someService.echoTxt('Harry');
+  }
 }

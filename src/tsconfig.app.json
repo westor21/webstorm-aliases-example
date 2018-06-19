@@ -3,8 +3,16 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "baseUrl": "./",
+    "paths": {
+      "@ui-services/*": ["app/$ui-services/*", "../generated/$ui-services/*"]
+    }
   },
+  "include": [
+    "./**/*.ts",
+    "../generated/**/*.ts"
+  ],
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
