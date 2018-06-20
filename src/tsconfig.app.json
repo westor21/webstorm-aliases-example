@@ -4,10 +4,7 @@
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "types": [],
-    "baseUrl": "./",
-    "paths": {
-      "@ui-services/*": ["app/$ui-services/*", "../generated/$ui-services/*"]
-    }
+    "baseUrl": "./"
   },
   "include": [
     "./**/*.ts",
